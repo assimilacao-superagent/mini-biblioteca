@@ -13,7 +13,11 @@ export function multiplicar(preco, quantidade) {
 
 // Devolve o preço com o desconto aplicado.
 export function aplicarDesconto(preco, percentagem) {
-  return preco - preco * (percentagem / 100);
+  // Calcula o desconto e arredonda metade para cima para um inteiro de cêntimos
+  const desconto = preco * (percentagem / 100);
+  const resto = preco - desconto;
+  // Arredonda metade para cima (Math.round) para um inteiro de cêntimos
+  return Math.round(resto);
 }
 
 // Divide um total em N parcelas.
