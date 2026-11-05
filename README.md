@@ -27,3 +27,4 @@ npm test
 Usa o corredor de testes do próprio Node (`node --test`), sem dependências.
 
 <!-- PROVA DE MERGE (Critico B, 2026-11-04): linha de prova sem efeito funcional. -->
+<!-- PROVA DE MERGE volta 2 (Critico B, 2026-11-04): segunda linha de prova sem efeito funcional. -->
