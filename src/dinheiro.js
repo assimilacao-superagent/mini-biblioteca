@@ -25,3 +25,7 @@ export function dividirEmParcelas(total, n) {
   const base = Math.floor(total / n);
   return Array.from({ length: n }, () => base);
 }
+
+export function dobro(n) {
+  return n * 2;
+}
