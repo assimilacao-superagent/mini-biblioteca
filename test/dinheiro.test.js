@@ -6,6 +6,7 @@ import {
   multiplicar,
   aplicarDesconto,
   dividirEmParcelas,
+  dobro,
 } from "../src/dinheiro.js";
 import { formatarCentimos } from "../src/formatos.js";
 
@@ -45,6 +46,14 @@ test("aplicarDesconto sempre retorna número inteiro de cêntimos", () => {
 
 test("dividirEmParcelas com divisao exacta", () => {
   assert.deepEqual(dividirEmParcelas(9000, 3), [3000, 3000, 3000]);
+});
+
+test("dobro de 150 cêntimos é 300", () => {
+  assert.equal(dobro(150), 300);
+});
+
+test("dobro de 0 cêntimos é 0", () => {
+  assert.equal(dobro(0), 0);
 });
 
 test("formatarCentimos de um valor comum", () => {
