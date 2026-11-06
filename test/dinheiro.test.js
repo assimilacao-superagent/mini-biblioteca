@@ -47,6 +47,26 @@ test("dividirEmParcelas com divisao exacta", () => {
   assert.deepEqual(dividirEmParcelas(9000, 3), [3000, 3000, 3000]);
 });
 
+test("dividirEmParcelas(10000, 3) soma exactamente 10000", () => {
+  const parcelas = dividirEmParcelas(10000, 3);
+  const soma = parcelas.reduce((acc, val) => acc + val, 0);
+  assert.equal(soma, 10000);
+  const expected = [3334, 3333, 3333];
+  assert.deepEqual(parcelas, expected);
+});
+
+test("dividirEmParcelas(100, 3) soma exactamente 100", () => {
+  const parcelas = dividirEmParcelas(100, 3);
+  const soma = parcelas.reduce((acc, val) => acc + val, 0);
+  assert.equal(soma, 100);
+});
+
+test("dividirEmParcelas nao excede distribuicao equitativa", () => {
+  const parcelas = dividirEmParcelas(100, 3);
+  const soma = parcelas.reduce((acc, val) => acc + val, 0);
+  assert.equal(soma, 100);
+});
+
 test("formatarCentimos de um valor comum", () => {
   assert.equal(formatarCentimos(1234), "12,34");
 });
