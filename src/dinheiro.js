@@ -1,9 +1,17 @@
 // Cálculos com dinheiro. Regra da casa: tudo em centimos inteiros.
+function isFiniteInteger(x) {
+  return Number.isFinite(x) && Number.isInteger(x);
+}
+
 export function somar(a, b) {
+  if (!isFiniteInteger(a)) throw new TypeError(`Primeiro argumento inválido: ${a}`);
+  if (!isFiniteInteger(b)) throw new TypeError(`Segundo argumento inválido: ${b}`);
   return a + b;
 }
 
 export function subtrair(a, b) {
+  if (!isFiniteInteger(a)) throw new TypeError(`Primeiro argumento inválido: ${a}`);
+  if (!isFiniteInteger(b)) throw new TypeError(`Segundo argumento inválido: ${b}`);
   return a - b;
 }
 
