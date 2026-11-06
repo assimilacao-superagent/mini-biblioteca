@@ -23,5 +23,6 @@ export function aplicarDesconto(preco, percentagem) {
 // Divide um total em N parcelas.
 export function dividirEmParcelas(total, n) {
   const base = Math.floor(total / n);
-  return Array.from({ length: n }, () => base);
+  const resto = total % n;
+  return Array.from({ length: n }, (_, i) => base + (i < resto ? 1 : 0));
 }
