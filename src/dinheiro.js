@@ -25,3 +25,12 @@ export function dividirEmParcelas(total, n) {
   const base = Math.floor(total / n);
   return Array.from({ length: n }, () => base);
 }
+
+// Devolve o preço com a taxa aplicada (inverso de aplicarDesconto).
+export function aplicarTaxa(preco, percentagem) {
+  // Calcula a taxa e adiciona ao preço
+  const taxa = preco * (percentagem / 100);
+  const total = preco + taxa;
+  // Arredonda metade para cima para um inteiro de cêntimos
+  return Math.round(total);
+}

@@ -6,6 +6,7 @@ import {
   multiplicar,
   aplicarDesconto,
   dividirEmParcelas,
+  aplicarTaxa,
 } from "../src/dinheiro.js";
 import { formatarCentimos } from "../src/formatos.js";
 
@@ -49,4 +50,17 @@ test("dividirEmParcelas com divisao exacta", () => {
 
 test("formatarCentimos de um valor comum", () => {
   assert.equal(formatarCentimos(1234), "12,34");
+});
+
+test("aplicarTaxa de 10000 5% para 10500", () => {
+  assert.equal(aplicarTaxa(10000, 5), 10500);
+});
+
+test("aplicarTaxa de 1999 10% para 2199", () => {
+  assert.equal(aplicarTaxa(1999, 10), 2199);
+});
+
+test("aplicarTaxa sempre retorna número inteiro de cêntimos", () => {
+  assert.equal(Number.isInteger(aplicarTaxa(10000, 5)), true);
+  assert.equal(Number.isInteger(aplicarTaxa(1999, 10)), true);
 });

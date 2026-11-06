@@ -12,6 +12,7 @@ De `src/dinheiro.js`:
 - `subtrair(a, b)` — subtrai dois valores em centimos.
 - `multiplicar(preco, quantidade)` — preço unitário × quantidade.
 - `aplicarDesconto(preco, percentagem)` — preço com desconto aplicado.
+- `aplicarTaxa(preco, percentagem)` — preço com taxa aplicada (inverso de aplicarDesconto).
 - `dividirEmParcelas(total, n)` — divide um total em `n` parcelas.
 
 De `src/formatos.js`:
