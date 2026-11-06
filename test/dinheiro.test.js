@@ -50,3 +50,15 @@ test("dividirEmParcelas com divisao exacta", () => {
 test("formatarCentimos de um valor comum", () => {
   assert.equal(formatarCentimos(1234), "12,34");
 });
+
+test("somar(10.5, 20) lança TypeError", () => {
+  assert.throws(() => somar(10.5, 20), TypeError);
+});
+
+test("somar('100', 50) lança TypeError", () => {
+  assert.throws(() => somar('100', 50), TypeError);
+});
+
+test("subtrair(NaN, 1) lança TypeError", () => {
+  assert.throws(() => subtrair(NaN, 1), TypeError);
+});
