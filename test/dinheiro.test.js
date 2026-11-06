@@ -50,3 +50,19 @@ test("dividirEmParcelas com divisao exacta", () => {
 test("formatarCentimos de um valor comum", () => {
   assert.equal(formatarCentimos(1234), "12,34");
 });
+
+test("formatarCentimos de 5 cêntimos pequenos", () => {
+  assert.equal(formatarCentimos(5), "0,05");
+});
+
+test("formatarCentimos de 50 cêntimos", () => {
+  assert.equal(formatarCentimos(50), "0,50");
+});
+
+test("formatarCentimos de 0 cêntimos", () => {
+  assert.equal(formatarCentimos(0), "0,00");
+});
+
+test("formatarCentimos de -150 cêntimos negativos", () => {
+  assert.equal(formatarCentimos(-150), "-1,50");
+});
